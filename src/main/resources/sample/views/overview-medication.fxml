@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="428.0" style="-fx-background-color: #F0C6C4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="428.0" style="-fx-background-color: #F0C6C4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="84.0" layoutY="84.0" prefHeight="914.0" prefWidth="344.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -24,20 +24,15 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label contentDisplay="CENTER" prefWidth="284.0" text="Medikamente" textFill="#707070" GridPane.columnSpan="2">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </Label>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4d9d8" height="96.0" layoutX="4.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="330.0" />
-                  <Label layoutX="21.0" layoutY="31.0" text="Ritalin" textFill="#707070">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4d9d8" height="96.0" layoutX="4.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="330.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="18.0" />
+                  <Label layoutX="21.0" layoutY="31.0" text="Ritalin" textFill="#707070" AnchorPane.topAnchor="31.0">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="157.0" layoutY="31.0" text="Vorhanden" textFill="#707070">
+                  <Label layoutX="157.0" layoutY="31.0" text="Vorhanden" textFill="#707070" AnchorPane.topAnchor="31.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -47,14 +42,14 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="23.0" layoutY="87.0" text="Um 08:00 1x" textFill="#707070">
+                  <Label layoutX="23.0" layoutY="87.0" text="Um 08:00 1x" textFill="#707070" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="87.0">
                      <font>
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <AnchorPane prefHeight="260.0" prefWidth="335.0">
+                  <AnchorPane prefHeight="260.0" prefWidth="335.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button layoutX="149.0" layoutY="141.0" mnemonicParsing="false" style="-fx-background-color: #EA7773;" text="+" textFill="WHITE">
+                        <Button layoutX="149.0" layoutY="141.0" mnemonicParsing="false" style="-fx-background-color: #EA7773;" text="+" textFill="WHITE" AnchorPane.topAnchor="141.0">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -63,6 +58,15 @@
                      </children>
                   </AnchorPane>
                   
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefWidth="284.0" text="Medikamente" textFill="#707070" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="18.0">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>
