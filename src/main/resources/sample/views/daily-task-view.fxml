@@ -47,35 +47,7 @@
                 <AnchorPane prefHeight="263.0" prefWidth="429.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
                     <children>
                         <VBox fx:id="medicationIntakeList" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                            <children>
-                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                    <children>
-                                        <CheckBox mnemonicParsing="false" style="-fx-background-color: #F4D9D8#F4D9D8;" text="Ritalin&#10;Um 8:00 1x&#10;" textFill="#707070" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <padding>
-                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                            </padding>
-                                        </CheckBox>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                    <children>
-                                        <CheckBox mnemonicParsing="false" style="-fx-background-color: #F4D9D8#F4D9D8;" text="Ritalin&#10;Um 8:00 1x&#10;" textFill="#707070" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <padding>
-                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                            </padding>
-                                        </CheckBox>
-                                    </children>
-                                </AnchorPane>
-                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                    <children>
-                                        <CheckBox mnemonicParsing="false" style="-fx-background-color: #F4D9D8#F4D9D8;" text="Ritalin&#10;Um 8:00 1x&#10;" textFill="#707070" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <padding>
-                                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                                            </padding>
-                                        </CheckBox>
-                                    </children>
-                                </AnchorPane>
-                            </children>
+
                         </VBox>
                     </children>
                     <opaqueInsets>

@@ -5,6 +5,12 @@ public class MedicationCheckBox {
     private String medicationName;
     private String dateAndAmount;
 
+    public MedicationCheckBox(boolean isChecked, String medicationName, String dateAndAmount){
+        this.isChecked = isChecked;
+        this.medicationName = medicationName;
+        this.dateAndAmount = dateAndAmount;
+    }
+
     public String getMedicationName() {
         return medicationName;
     }

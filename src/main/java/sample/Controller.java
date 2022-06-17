@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
@@ -33,20 +34,7 @@ public class Controller {
     void changeViewToOverviewMedication() throws IOException {
         scene.setRoot(FXMLLoader.load(getClass().getResource("views/overview-medication.fxml")));
         notesTextField.setText(dailyNotes.getNotesContent());
-        for (MedicationCheckBox medicationCheckBox : medicationList.getMedicationCheckBoxList()) {
-            AnchorPane anchorPane = new AnchorPane();
-            anchorPane.setPrefSize(200, 200);
-            CheckBox checkBox = new CheckBox(medicationCheckBox.getMedicationName() + "&#10;" + medicationCheckBox.getDateAndAmount() + "&#10;");
-            checkBox.setStyle("-fx-background-color: #F4D9D8;");
-            checkBox.setTextFill(Paint.valueOf("#707070"));
-            checkBox.setSelected(medicationCheckBox.getIsChecked());
-            checkBox.setPadding(new Insets(15, 15, 15, 15));
-            AnchorPane.setLeftAnchor(checkBox, 0.0);
-            AnchorPane.setRightAnchor(checkBox, 0.0);
-            AnchorPane.setTopAnchor(checkBox, 0.0);
-            medicationIntakeList.getChildren().addAll(anchorPane);
-        }
-
+        fillMedicationIntakeList();
     }
 
     @FXML
@@ -62,5 +50,25 @@ public class Controller {
     @FXML
     void notesTextInputChanged(){
         dailyNotes.setNotesContent(notesTextField.getText());
+    }
+
+    private void fillMedicationIntakeList(){
+        if(medicationList.getMedicationCheckBoxList().isEmpty()){
+            medicationIntakeList.getChildren().add(new Label("Keine Medikamente vorhanden"));
+        } else {
+            for (MedicationCheckBox medicationCheckBox : medicationList.getMedicationCheckBoxList()) {
+                AnchorPane anchorPane = new AnchorPane();
+                anchorPane.setPrefSize(200, 200);
+                CheckBox checkBox = new CheckBox(medicationCheckBox.getMedicationName() + "&#10;" + medicationCheckBox.getDateAndAmount() + "&#10;");
+                checkBox.setStyle("-fx-background-color: #F4D9D8;");
+                checkBox.setTextFill(Paint.valueOf("#707070"));
+                checkBox.setSelected(medicationCheckBox.getIsChecked());
+                checkBox.setPadding(new Insets(15, 15, 15, 15));
+                AnchorPane.setLeftAnchor(checkBox, 0.0);
+                AnchorPane.setRightAnchor(checkBox, 0.0);
+                AnchorPane.setTopAnchor(checkBox, 0.0);
+                medicationIntakeList.getChildren().addAll(anchorPane);
+            }
+        }
     }
 }
